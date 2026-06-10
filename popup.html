@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Cookie Exporter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+        </svg>
+        <div>
+          <h1>X Cookie Exporter</h1>
+          <span class="subtitle">for twikit</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="status-cards" id="status-cards">
+      <div class="cookie-card" data-cookie="auth_token">
+        <div class="card-header">
+          <span class="cookie-name">auth_token</span>
+          <span class="status-badge pending" id="badge-auth_token">...</span>
+        </div>
+        <div class="card-value" id="value-auth_token">—</div>
+      </div>
+      <div class="cookie-card" data-cookie="ct0">
+        <div class="card-header">
+          <span class="cookie-name">ct0</span>
+          <span class="status-badge pending" id="badge-ct0">...</span>
+        </div>
+        <div class="card-value" id="value-ct0">—</div>
+      </div>
+      <div class="cookie-card" data-cookie="twid">
+        <div class="card-header">
+          <span class="cookie-name">twid</span>
+          <span class="status-badge pending" id="badge-twid">...</span>
+        </div>
+        <div class="card-value" id="value-twid">—</div>
+      </div>
+    </section>
+
+    <div class="domain-info" id="domain-info"></div>
+
+    <div class="actions">
+      <button id="download-btn" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Download cookies.json
+      </button>
+      <p class="hint">Only includes <code>auth_token</code>, <code>ct0</code>, and <code>twid</code></p>
+    </div>
+
+    <footer>
+      <p>Make sure you are logged in to <strong>X.com</strong> or <strong>Twitter.com</strong></p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
